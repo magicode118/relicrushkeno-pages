@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#06101d">
+<meta name="description" content="Relic Rush Keno is a relic-themed Keno adventure for Android with expeditions, daily rewards, achievements and optional cloud backup.">
+<title>Relic Rush Keno — Relics, Expeditions & Keno</title>
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#06101d;
+  --bg2:#091827;
+  --panel:#0d1d2e;
+  --panel2:#10243a;
+  --text:#f7efd6;
+  --muted:#aebed0;
+  --gold:#e7b846;
+  --gold2:#ffd872;
+  --cyan:#49d9f2;
+  --purple:#c55cff;
+  --border:rgba(231,184,70,.34);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 15% 0,rgba(73,217,242,.10),transparent 28rem),
+    radial-gradient(circle at 85% 10%,rgba(197,92,255,.10),transparent 26rem),
+    linear-gradient(180deg,var(--bg),#040a12 80%);
+  color:var(--text);
+  line-height:1.68;
+}
+a{color:var(--cyan)}
+.wrap{width:min(980px,calc(100% - 36px));margin:0 auto}
+header{
+  border-bottom:1px solid rgba(231,184,70,.22);
+  background:rgba(6,16,29,.82);
+  backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:20
+}
+nav{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px
+}
+.brand{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:950;
+  letter-spacing:.08em
+}
+.brand .relic{color:var(--gold2)}
+.brand .keno{color:#dc81ff}
+.navlinks{display:flex;flex-wrap:wrap;gap:18px;justify-content:flex-end}
+.navlinks a,.back{color:var(--muted);text-decoration:none;font-weight:750}
+.navlinks a:hover,.back:hover{color:var(--text)}
+main{padding:54px 0 72px}
+.hero{text-align:center;padding:30px 0 48px}
+.eyebrow{
+  color:var(--cyan);
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.22em;
+  text-transform:uppercase
+}
+h1{
+  margin:10px 0 16px;
+  line-height:1.02;
+  font-size:clamp(2.4rem,8vw,5.8rem);
+  letter-spacing:-.035em
+}
+.logo-word{color:var(--gold2);text-shadow:0 0 24px rgba(231,184,70,.13)}
+.logo-keno{color:#dd7cff;text-shadow:0 0 26px rgba(197,92,255,.18)}
+.lead{max-width:760px;margin:0 auto;color:var(--muted);font-size:clamp(1.03rem,2vw,1.2rem)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.chip{
+  border:1px solid var(--border);
+  background:rgba(13,29,46,.74);
+  border-radius:999px;
+  padding:8px 13px;
+  color:#e7eef8;
+  font-size:.83rem;
+  font-weight:850
+}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,section.policy{
+  background:linear-gradient(180deg,rgba(16,36,58,.80),rgba(13,29,46,.82));
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 18px 55px rgba(0,0,0,.18)
+}
+.card h2,section.policy h2{margin:0 0 9px;color:var(--gold2);font-size:1.2rem}
+.card p{margin:0;color:var(--muted)}
+.legal{
+  margin-top:38px;
+  background:rgba(13,29,46,.76);
+  border:1px solid rgba(73,217,242,.28);
+  border-radius:18px;
+  padding:27px
+}
+.legal h2{margin-top:0}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.button{
+  display:inline-block;
+  padding:11px 15px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:900;
+  border:1px solid rgba(73,217,242,.48);
+  background:rgba(73,217,242,.07);
+  color:var(--cyan)
+}
+.button.secondary{
+  border-color:rgba(197,92,255,.52);
+  background:rgba(197,92,255,.08);
+  color:#e2b3ff
+}
+.policy-head{margin-bottom:26px}
+.policy-head h1{font-size:clamp(2.3rem,7vw,4.1rem)}
+.updated,.muted{color:var(--muted)}
+.notice{
+  padding:17px 19px;
+  background:rgba(197,92,255,.07);
+  border:1px solid rgba(197,92,255,.30);
+  border-radius:14px;
+  margin:22px 0 26px
+}
+section.policy{margin:16px 0}
+section.policy h3{margin:19px 0 5px;color:var(--cyan);font-size:1.02rem}
+section.policy p{margin:8px 0 13px}
+section.policy ul,section.policy ol{padding-left:23px}
+section.policy li{margin:7px 0}
+.note{
+  border-left:3px solid var(--cyan);
+  background:rgba(73,217,242,.055);
+  padding:12px 16px;
+  border-radius:0 10px 10px 0
+}
+.subject{
+  display:inline-block;
+  padding:3px 8px;
+  border-radius:6px;
+  border:1px solid rgba(197,92,255,.34);
+  background:#13243a;
+  color:#f0c7ff;
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace
+}
+footer{
+  border-top:1px solid rgba(231,184,70,.18);
+  padding:28px 0 38px;
+  color:var(--muted);
+  font-size:.88rem
+}
+@media(max-width:760px){
+  nav{align-items:flex-start;flex-direction:column;padding:16px 0}
+  .navlinks{justify-content:flex-start}
+  main{padding-top:34px}
+  .grid{grid-template-columns:1fr}
+  .hero{padding-top:18px}
+  .card,section.policy,.legal{padding:20px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Relic Rush Keno home"><span class="relic">RELIC RUSH</span> <span class="keno">KENO</span></a>
+      <div class="navlinks">
+        <a href="#game">The Game</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="account-deletion.html">Account Deletion</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" id="game">
+    <div class="eyebrow">Relics · Luck · Rewards</div>
+    <h1><span class="logo-word">RELIC RUSH</span><br><span class="logo-keno">KENO</span></h1>
+    <p class="lead">Pick your numbers, scan ancient ruins, build your explorer profile and unlock relic-themed rewards in a polished Keno adventure for Android.</p>
+    <div class="chips" aria-label="Relic Rush Keno features">
+      <span class="chip">KENO SCANS</span>
+      <span class="chip">DAILY CACHE</span>
+      <span class="chip">DAILY EXPEDITIONS</span>
+      <span class="chip">RELIC AVATARS</span>
+      <span class="chip">PLAYER PROGRESSION</span>
+      <span class="chip">OPTIONAL CLOUD BACKUP</span>
+    </div>
+  </section>
+
+  <section class="grid" aria-label="Game features">
+    <article class="card">
+      <h2>SCAN THE RUINS</h2>
+      <p>Choose your Keno numbers, place a virtual-credit bet and scan for wins, experience and rare relic discoveries.</p>
+    </article>
+    <article class="card">
+      <h2>EXPLORE &amp; PROGRESS</h2>
+      <p>Build XP, track personal statistics, complete expedition objectives and unlock achievement-based Relic Avatars.</p>
+    </article>
+    <article class="card">
+      <h2>RETURN FOR REWARDS</h2>
+      <p>Claim the Daily Cache, pursue Daily Expedition rewards and optionally protect progress using Google sign-in and Firebase cloud backup.</p>
+    </article>
+  </section>
+
+  <section class="legal" aria-labelledby="legal-title">
+    <h2 id="legal-title">Privacy &amp; account information</h2>
+    <p>Relic Rush Keno is developed by <strong>NavyB Technology</strong>. The Android app uses optional Google sign-in/Firebase cloud backup and Google AdMob advertising. Review the pages below for details about data handling and account deletion.</p>
+    <div class="buttons">
+      <a class="button" href="privacy-policy.html">Read Privacy Policy</a>
+      <a class="button secondary" href="account-deletion.html">Account Deletion</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 NavyB Technology · Relic Rush Keno · Android package <code>com.magicode118.relicrushkeno</code></div>
+</footer>
+</body>
+</html>

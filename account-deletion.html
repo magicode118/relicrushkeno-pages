@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#06101d">
+<meta name="description" content="Instructions for requesting deletion of a Relic Rush Keno account and associated account-linked data.">
+<title>Account Deletion — Relic Rush Keno</title>
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#06101d;
+  --bg2:#091827;
+  --panel:#0d1d2e;
+  --panel2:#10243a;
+  --text:#f7efd6;
+  --muted:#aebed0;
+  --gold:#e7b846;
+  --gold2:#ffd872;
+  --cyan:#49d9f2;
+  --purple:#c55cff;
+  --border:rgba(231,184,70,.34);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 15% 0,rgba(73,217,242,.10),transparent 28rem),
+    radial-gradient(circle at 85% 10%,rgba(197,92,255,.10),transparent 26rem),
+    linear-gradient(180deg,var(--bg),#040a12 80%);
+  color:var(--text);
+  line-height:1.68;
+}
+a{color:var(--cyan)}
+.wrap{width:min(980px,calc(100% - 36px));margin:0 auto}
+header{
+  border-bottom:1px solid rgba(231,184,70,.22);
+  background:rgba(6,16,29,.82);
+  backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:20
+}
+nav{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px
+}
+.brand{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:950;
+  letter-spacing:.08em
+}
+.brand .relic{color:var(--gold2)}
+.brand .keno{color:#dc81ff}
+.navlinks{display:flex;flex-wrap:wrap;gap:18px;justify-content:flex-end}
+.navlinks a,.back{color:var(--muted);text-decoration:none;font-weight:750}
+.navlinks a:hover,.back:hover{color:var(--text)}
+main{padding:54px 0 72px}
+.hero{text-align:center;padding:30px 0 48px}
+.eyebrow{
+  color:var(--cyan);
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.22em;
+  text-transform:uppercase
+}
+h1{
+  margin:10px 0 16px;
+  line-height:1.02;
+  font-size:clamp(2.4rem,8vw,5.8rem);
+  letter-spacing:-.035em
+}
+.logo-word{color:var(--gold2);text-shadow:0 0 24px rgba(231,184,70,.13)}
+.logo-keno{color:#dd7cff;text-shadow:0 0 26px rgba(197,92,255,.18)}
+.lead{max-width:760px;margin:0 auto;color:var(--muted);font-size:clamp(1.03rem,2vw,1.2rem)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.chip{
+  border:1px solid var(--border);
+  background:rgba(13,29,46,.74);
+  border-radius:999px;
+  padding:8px 13px;
+  color:#e7eef8;
+  font-size:.83rem;
+  font-weight:850
+}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,section.policy{
+  background:linear-gradient(180deg,rgba(16,36,58,.80),rgba(13,29,46,.82));
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 18px 55px rgba(0,0,0,.18)
+}
+.card h2,section.policy h2{margin:0 0 9px;color:var(--gold2);font-size:1.2rem}
+.card p{margin:0;color:var(--muted)}
+.legal{
+  margin-top:38px;
+  background:rgba(13,29,46,.76);
+  border:1px solid rgba(73,217,242,.28);
+  border-radius:18px;
+  padding:27px
+}
+.legal h2{margin-top:0}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.button{
+  display:inline-block;
+  padding:11px 15px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:900;
+  border:1px solid rgba(73,217,242,.48);
+  background:rgba(73,217,242,.07);
+  color:var(--cyan)
+}
+.button.secondary{
+  border-color:rgba(197,92,255,.52);
+  background:rgba(197,92,255,.08);
+  color:#e2b3ff
+}
+.policy-head{margin-bottom:26px}
+.policy-head h1{font-size:clamp(2.3rem,7vw,4.1rem)}
+.updated,.muted{color:var(--muted)}
+.notice{
+  padding:17px 19px;
+  background:rgba(197,92,255,.07);
+  border:1px solid rgba(197,92,255,.30);
+  border-radius:14px;
+  margin:22px 0 26px
+}
+section.policy{margin:16px 0}
+section.policy h3{margin:19px 0 5px;color:var(--cyan);font-size:1.02rem}
+section.policy p{margin:8px 0 13px}
+section.policy ul,section.policy ol{padding-left:23px}
+section.policy li{margin:7px 0}
+.note{
+  border-left:3px solid var(--cyan);
+  background:rgba(73,217,242,.055);
+  padding:12px 16px;
+  border-radius:0 10px 10px 0
+}
+.subject{
+  display:inline-block;
+  padding:3px 8px;
+  border-radius:6px;
+  border:1px solid rgba(197,92,255,.34);
+  background:#13243a;
+  color:#f0c7ff;
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace
+}
+footer{
+  border-top:1px solid rgba(231,184,70,.18);
+  padding:28px 0 38px;
+  color:var(--muted);
+  font-size:.88rem
+}
+@media(max-width:760px){
+  nav{align-items:flex-start;flex-direction:column;padding:16px 0}
+  .navlinks{justify-content:flex-start}
+  main{padding-top:34px}
+  .grid{grid-template-columns:1fr}
+  .hero{padding-top:18px}
+  .card,section.policy,.legal{padding:20px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="index.html"><span class="relic">RELIC RUSH</span> <span class="keno">KENO</span></a>
+      <a class="back" href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="policy-head">
+    <div class="eyebrow">NavyB Technology</div>
+    <h1>Delete your Relic Rush Keno account</h1>
+    <p class="lead">This page explains how a player can request deletion of a Relic Rush Keno account and the account-linked data associated with it.</p>
+  </div>
+
+  <section class="policy">
+    <h2>How to request deletion</h2>
+    <ol>
+      <li>Use the <strong>developer contact email or support method shown on the Relic Rush Keno Google Play Store listing</strong>.</li>
+      <li>Use the subject or opening line <span class="subject">Relic Rush Keno account deletion</span>.</li>
+      <li>Tell us the Google email address or Google display name used to sign in to Relic Rush Keno and, if needed, additional non-secret information reasonably required to identify the correct player account.</li>
+      <li>We may ask you to verify control of the account before deletion so that another person cannot delete your account without authorization.</li>
+    </ol>
+    <div class="note"><strong>Never send your Google password, authentication token, recovery code, keystore information or other login secrets.</strong></div>
+  </section>
+
+  <section class="policy">
+    <h2>Data covered by a deletion request</h2>
+    <p>After a valid request is verified and processed, NavyB Technology will delete account-linked Relic Rush Keno data under its control. This may include:</p>
+    <ul>
+      <li>the Firebase Authentication identity/account used by Relic Rush Keno, where applicable;</li>
+      <li>the Relic Rush Keno cloud player-progress record linked to your account identifier;</li>
+      <li>virtual credits, XP, level, rounds played, best win and total winnings stored in the cloud profile;</li>
+      <li>Daily Cache, Daily Expedition and challenge/progression data stored in the cloud profile;</li>
+      <li>achievement progress, unlocked Relic Avatars and selected avatar information;</li>
+      <li>recent-round history and other account-linked game statistics stored in the cloud profile; and</li>
+      <li>other Relic Rush Keno account-linked cloud data under NavyB Technology's control.</li>
+    </ul>
+  </section>
+
+  <section class="policy">
+    <h2>Data that may remain</h2>
+    <p>Information may be retained where required by law or where reasonably necessary for security, fraud prevention, dispute resolution or other legitimate legal obligations.</p>
+    <p>Information stored only on your Android device may remain until you clear Relic Rush Keno's app data or uninstall the app. NavyB Technology cannot remotely erase local data from a device that is no longer communicating with the app.</p>
+    <p>Data processed independently by Google, including certain advertising or Google Account data, is governed by Google's own retention and deletion practices.</p>
+  </section>
+
+  <section class="policy">
+    <h2>Your Google account is not deleted</h2>
+    <p>Deleting your Relic Rush Keno account does <strong>not</strong> delete your Google account. The request concerns the Relic Rush Keno account/profile and Relic Rush Keno data associated with it. To manage or delete your Google account, use Google's own account controls.</p>
+  </section>
+
+  <section class="policy">
+    <h2>Guest-only players</h2>
+    <p>If you have never signed in with Google, your Relic Rush Keno progress is stored locally on your device as a guest profile. You can remove that local guest data by clearing the app's storage in Android settings or uninstalling the app.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><a href="index.html">Relic Rush Keno home</a> · <a href="privacy-policy.html">Privacy Policy</a> · © 2026 NavyB Technology</div>
+</footer>
+</body>
+</html>
